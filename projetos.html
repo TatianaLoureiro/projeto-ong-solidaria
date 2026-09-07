@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patas de Amor - Em Adoção</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>🐾 Patas de Amor</h1>
+
+    <!-- Botão Hambúrguer para telas menores/mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navegação Principal -->
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <!-- Menu Dropdown -->
+        <li class="dropdown">
+          <a href="projetos.html" class="dropdown-toggle">Em Adoção ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="openComoAjudar">Como Ajudar</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html" class="btn-destaque">Quero Adotar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Modal / Painel "Como Ajudar" -->
+<div id="modalComoAjudar" class="modal-como-ajudar" style="display: none;">
+  <div class="modal-content">
+    <button class="close-modal" id="closeComoAjudar" aria-label="Fechar">&times;</button>
+    <h2>Formas de Ajudar</h2>
+    <div class="modal-body">
+      <article>
+        <h3>💳 Doações</h3>
+        <p>Envie dinheiro via Pix, ração, medicamentos, produtos de limpeza ou cobertores. Você pode usar plataformas como a Petlove ou o programa Adote Petz para doar com facilidade.</p>
+      </article>
+
+      <article>
+        <h3>🤝 Trabalho Voluntário</h3>
+        <p>Ajude a passear com os cães, dar banho, limpar os recintos ou organizar eventos e feiras de adoção.</p>
+      </article>
+
+      <article>
+        <h3>🏠 Lar Temporário</h3>
+        <p>Abrigue um animal resgatado em sua casa de forma provisória até que ele consiga uma família definitiva.</p>
+      </article>
+
+      <article>
+        <h3>🐾 Apadrinhamento</h3>
+        <p>Arcagem com os custos mensais de alimentação e saúde de um animal específico que vive no abrigo.</p>
+      </article>
+
+      <article>
+        <h3>📢 Divulgação</h3>
+        <p>Compartilhe as fotos e histórias dos animais nas redes sociais para aumentar as chances de adoção.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+  <main class="container text-center">
+    <section id="adocao" class="pg">
+      <h2>Animais para Adoção</h2>
+      
+      <div class="filtro-container">
+        <select id="f-esp" onchange="filtrar()">
+          <option value="todos">Todos</option>
+          <option value="gato">Gatos</option>
+          <option value="cao">Cachorros</option>
+        </select>
+      </div>
+
+      <!-- Seção Gatos (Fotos Maiores e Lado a Lado) -->
+      <div class="grupo-especie">
+        <h3>Gatos</h3>
+        <div class="grid-12 grid-pets">
+          <article class="card pet col-6" data-e="gato">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="Mia">
+            <h3>Mia</h3>
+            <p>🐱 Gato • 1 ano</p>
+            <a href="cadastro.html" class="btn">Adotar</a>
+          </article>
+
+          <article class="card pet col-6" data-e="gato">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="Oliver">
+            <h3>Oliver</h3>
+            <p>🐱 Gato • 2 anos</p>
+            <a href="cadastro.html" class="btn">Adotar</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Seção Cães (Fotos Maiores e Lado a Lado) -->
+      <div class="grupo-especie">
+        <h3>Cães</h3>
+        <div class="grid-12 grid-pets">
+          <article class="card pet col-6" data-e="cao">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600" alt="Thor">
+            <h3>Thor</h3>
+            <p>🐶 Cão • 3 anos</p>
+            <a href="cadastro.html" class="btn">Adotar</a>
+          </article>
+
+          <article class="card pet col-6" data-e="cao">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600" alt="Luna">
+            <h3>Luna</h3>
+            <p>🐶 Cão • 1 ano</p>
+            <a href="cadastro.html" class="btn">Adotar</a>
+          </article>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Patas de Amor</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

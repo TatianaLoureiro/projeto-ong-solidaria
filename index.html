@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patas de Amor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>🐾 Patas de Amor</h1>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li class="dropdown">
+          <a href="#projetos" class="dropdown-toggle">Em Adoção ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="openComoAjudar">Como Ajudar</a></li>
+          </ul>
+        </li>
+        <li><a href="#cadastro" class="btn-destaque">Quero Adotar</a></li>
+        <li><a href="#solicitacoes">Solicitações</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Modal Como Ajudar -->
+<div id="modalComoAjudar" class="modal-como-ajudar" style="display: none;">
+  <div class="modal-content">
+    <button class="close-modal" id="closeComoAjudar" aria-label="Fechar">&times;</button>
+    <h2>Formas de Ajudar</h2>
+    <div class="modal-body">
+      <article>
+        <h3>💳 Doações</h3>
+        <p>Envie dinheiro via Pix, ração, medicamentos, produtos de limpeza ou cobertores.</p>
+      </article>
+      <article>
+        <h3>🤝 Trabalho Voluntário</h3>
+        <p>Ajude a passear com os cães, dar banho, limpar os recintos ou organizar eventos.</p>
+      </article>
+      <article>
+        <h3>🏠 Lar Temporário</h3>
+        <p>Abrigue um animal resgatado de forma provisória até conseguir uma família.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<main class="container" id="app-content">
+  <!-- Conteúdo dinâmico da SPA será injetado aqui pelo router.js -->
+</main>
+
+<footer>
+  <p>&copy; 2026 Patas de Amor</p>
+</footer>
+
+<!-- Ponto de Entrada Modular JS -->
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

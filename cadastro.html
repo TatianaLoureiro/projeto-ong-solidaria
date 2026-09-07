@@ -1,0 +1,136 @@
+<!-- cadastro.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patas de Amor - Quero Adotar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>🐾 Patas de Amor</h1>
+
+    <!-- Botão Hambúrguer para telas menores/mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navegação Principal -->
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <!-- Menu Dropdown -->
+        <li class="dropdown">
+          <a href="projetos.html" class="dropdown-toggle">Em Adoção ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="openComoAjudar">Como Ajudar</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html" class="btn-destaque">Quero Adotar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Modal / Painel "Como Ajudar" -->
+<div id="modalComoAjudar" class="modal-como-ajudar" style="display: none;">
+  <div class="modal-content">
+    <button class="close-modal" id="closeComoAjudar" aria-label="Fechar">&times;</button>
+    <h2>Formas de Ajudar</h2>
+    <div class="modal-body">
+      <article>
+        <h3>💳 Doações</h3>
+        <p>Envie dinheiro via Pix, ração, medicamentos, produtos de limpeza ou cobertores. Você pode usar plataformas como a Petlove ou o programa Adote Petz para doar com facilidade.</p>
+      </article>
+
+      <article>
+        <h3>🤝 Trabalho Voluntário</h3>
+        <p>Ajude a passear com os cães, dar banho, limpar os recintos ou organizar eventos e feiras de adoção.</p>
+      </article>
+
+      <article>
+        <h3>🏠 Lar Temporário</h3>
+        <p>Abrigue um animal resgatado em sua casa de forma provisória até que ele consiga uma família definitiva.</p>
+      </article>
+
+      <article>
+        <h3>🐾 Apadrinhamento</h3>
+        <p>Arcagem com os custos mensais de alimentação e saúde de um animal específico que vive no abrigo.</p>
+      </article>
+
+      <article>
+        <h3>📢 Divulgação</h3>
+        <p>Compartilhe as fotos e histórias dos animais nas redes sociais para aumentar as chances de adoção.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+  <main>
+    <section id="cadastro" class="pg">
+      <h2>Quero Adotar</h2>
+      <form id="formAdocao">
+        
+        <!-- Bloco 1: Identificação -->
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          
+          <div class="field-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+          </div>
+
+          <div class="field-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+          </div>
+        </fieldset>
+
+        <!-- Bloco 2: Contato e Endereço -->
+        <fieldset>
+          <legend>Contato e Localização</legend>
+
+          <div class="field-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+
+          <div class="field-group">
+            <label for="tel">Telefone / WhatsApp:</label>
+            <input type="tel" id="tel" placeholder="(00) 00000-0000" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" maxlength="15" required>
+          </div>
+
+          <div class="field-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" maxlength="9" required>
+          </div>
+        </fieldset>
+
+        <!-- Bloco 3: Preferência de Adoção -->
+        <fieldset>
+          <legend>Interesse em Adoção</legend>
+
+          <div class="field-group">
+            <label for="interesse">Preferência de Pet:</label>
+            <select id="interesse" required>
+              <option value="">Selecione...</option>
+              <option value="gato">Adotar Gato</option>
+              <option value="cao">Adotar Cão</option>
+              <option value="indiferente">Indiferente (Gato ou Cão)</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar Solicitação</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 Patas de Amor</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
